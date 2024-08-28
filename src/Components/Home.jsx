@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Hero_Comp />
       <Features_Comp />
-      <FetchDistributor_Comp />
+      {/* <FetchDistributor_Comp /> */}
     </>
   );
 };

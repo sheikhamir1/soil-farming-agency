@@ -29,11 +29,14 @@ const AdminSignup_Comp = () => {
         body: JSON.stringify(data),
       });
       const result = await response.json();
-      console.log("result", result);
+      // console.log("result", result);
+      if (result.success === true) {
+        reset();
+        alert("Registration successfull please Verify your email!");
+      }
     } catch (error) {
       console.log(error);
     }
-    reset();
   };
 
   return (

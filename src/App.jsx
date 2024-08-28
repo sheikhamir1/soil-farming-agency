@@ -19,6 +19,7 @@ import UpdateDistributor_Comp from "./Components/Distributor/UpdateDistributor_C
 import SearchComponent from "./Components/Search/Search_Comp";
 import Footer_Comp from "./Components/Footer/Footer_Comp";
 import Contact_Comp from "./Components/contect/Contact_Comp";
+import VerifyEmail_Comp from "./Components/Verify/VerifyEmail_Comp";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
             <Route path="/userdashboard" element={<UserDashboard_Comp />} />
             <Route path="/search" element={<SearchComponent />} />
             <Route path="/contact" element={<Contact_Comp />} />
+            <Route path="/verifyemail/:token" element={<VerifyEmail_Comp />} />
           </Routes>
           <Footer_Comp />
         </CreateProvider1>

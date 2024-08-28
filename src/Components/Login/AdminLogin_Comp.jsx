@@ -30,28 +30,30 @@ const AdminLogin_Comp = () => {
       });
       const result = await response.json();
       // console.log("result", result);
-      localStorage.setItem("token", result.authToken);
-      localStorage.setItem("role", result.role);
+      if (result.success === true) {
+        localStorage.setItem("token", result.authToken);
+        localStorage.setItem("role", result.role);
 
-      setTrackLogin((pre) => pre + 1);
+        setTrackLogin((pre) => pre + 1);
 
-      navigate("/admindashboard");
+        navigate("/admindashboard");
 
-      // fetch soil data
-      const Fetchdata = await fetch(
-        "http://localhost:3000/api/soil/fetchsoil",
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      );
+        // fetch soil data
+        const Fetchdata = await fetch(
+          "http://localhost:3000/api/soil/fetchsoil",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
 
-      const fetchdata = await Fetchdata.json();
-      setSoilData(fetchdata.soil || []);
-      // console.log(fetchdata);
+        const fetchdata = await Fetchdata.json();
+        setSoilData(fetchdata.soil || []);
+        // console.log(fetchdata);
+      }
     } catch (error) {
       console.log(error);
     }

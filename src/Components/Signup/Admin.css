@@ -1,0 +1,28 @@
+.SignupSet {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+h1.Adminheading {
+  text-align: center;
+  margin-top: 70px;
+}
+form.SignupForm {
+  width: 500px;
+  margin: 10px;
+}
+/* 9eeaf9 */
+button.btn.btn-primary {
+  background-color: #9eeaf9 !important;
+}
+button.btn.btn-primary :hover {
+  background-color: #47e0ff !important;
+  color: black !important;
+}
+.btn:hover {
+  color: #000;
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+}

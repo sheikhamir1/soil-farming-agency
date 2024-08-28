@@ -1,0 +1,85 @@
+.AdminHeading {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+/* Container for buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+/* General button styling */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  text-decoration: none; /* Ensures no underline on links */
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #9eeaf9 !important;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button active effect */
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Different colors for different buttons */
+.button.profile {
+  background-color: #28a745; /* Green */
+}
+
+.button.soil-form {
+  background-color: #ffc107; /* Yellow */
+}
+
+.button.distributor {
+  background-color: #17a2b8; /* Teal */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 0.875rem;
+  }
+}
+.setbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.button.profile {
+  margin: 10px;
+}
+button.button.soil-form {
+  margin: 10px;
+}
+button.button.distributor {
+  margin: 10px;
+}

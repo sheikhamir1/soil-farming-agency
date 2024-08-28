@@ -1,0 +1,77 @@
+.justify-content-center.flex-grow-1 {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: #9eeaf9 !important;
+}
+.me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll {
+  font-weight: 500;
+  color: black;
+}
+span.navbar-brand {
+  font-weight: 900;
+  font-size: x-large;
+}
+button.btn.btn-outline-success {
+  --bs-btn-color: #000000;
+  --bs-btn-border-color: #000000;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bs-cyan);
+  --bs-btn-hover-border-color: var(--bs-gray-dark);
+  --bs-btn-active-bg: var(--bs-info-bg-subtle)
+  --bs-btn-active-border-color: var(--bs-gray-dark);
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+}
+a.nav-link.nav-link {
+  color: black;
+}
+a.me-2.btn.btn-outline-primary {
+  --bs-btn-color: #000000;
+  --bs-btn-border-color: #000000;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bs-cyan);
+  --bs-btn-hover-border-color: var(--bs-gray-dark);
+  --bs-btn-active-bg: var(--bs-info-bg-subtle)
+  --bs-btn-active-border-color: var(--bs-gray-dark);
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+}
+button.btn.btn-primary {
+    --bs-btn-color: #000000;
+    
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--bs-cyan);
+    --bs-btn-hover-border-color: var(--bs-gray-dark);
+    --bs-btn-active-bg: var(--bs-info-bg-subtle)
+    --bs-btn-active-border-color: var(--bs-gray-dark);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    background-color: #47e0ff;
+    font-weight: 500;
+}
+a {
+    --bs-btn-color: #75f1f1 !important;
+    --bs-btn-border-color: #000000;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--bs-cyan);
+    --bs-btn-hover-border-color: var(--bs-gray-dark);
+    --bs-btn-active-bg: var(--bs-info-bg-subtle)
+    --bs-btn-active-border-color: var(--bs-gray-dark);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+}
+a#basic-nav-dropdown {
+  display: flex;
+  align-items: center;
+}
+svg.icon {
+  margin-left: 5px;
+}
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav {
+      flex-direction: row;
+      align-items: center;
+  }
+}
+.d-flex.align-items-center {
+  margin: 5px;
+}

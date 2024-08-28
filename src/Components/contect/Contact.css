@@ -1,0 +1,28 @@
+/* Contact Container Styling */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  padding: 20px;
+}
+
+/* Heading Styling */
+.contact-heading {
+  font-family: "Arial", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Message Styling */
+.contact-message {
+  font-family: "Arial", sans-serif;
+  font-size: 1.25rem;
+  color: #6c757d;
+  text-align: center;
+}

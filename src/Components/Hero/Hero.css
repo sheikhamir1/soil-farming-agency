@@ -1,0 +1,51 @@
+strong.block.font-extrabold.text-rose-500 {
+  color: #0dcaf0;
+  font-size: 35px;
+}
+
+/* Example CSS for Hero section */
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-rose-500 {
+  color: #f87171;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.focus:outline-none {
+  outline: none;
+}
+
+.focus:ring {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+/* Utility classes */
+.setColor {
+  background-color: #0dcaf0;
+  color: #000000;
+}
+
+.setColor:hover {
+  background-color: #27a6bd;
+}

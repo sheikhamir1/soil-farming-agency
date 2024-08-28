@@ -13,7 +13,7 @@ UI Design: Modern design using Bootstrap, Tailwind, and raw CSS.
 Technologies Used
 Frontend: React (MERN stack), Bootstrap, Tailwind CSS, raw CSS
 Backend: Node.js, Express
-Database: Mongodb , mongoose
+Database: Mongodb , mongoose (check my repo can will fine backend code with the project name)
 Deployment: Local environment 
 
 Installation

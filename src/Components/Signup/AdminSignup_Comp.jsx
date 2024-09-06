@@ -28,8 +28,16 @@ const AdminSignup_Comp = () => {
         },
         body: JSON.stringify(data),
       });
-      const result = await response.json();
       // console.log("result", result);
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        // Throw an error with the full response data
+        alert(errorData.message);
+        throw new Error(JSON.stringify(errorData));
+      }
+      const result = await response.json();
+
       if (result.success === true) {
         reset();
         alert("Registration successfull please Verify your email!");

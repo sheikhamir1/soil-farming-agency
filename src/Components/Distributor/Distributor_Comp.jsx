@@ -59,8 +59,19 @@ const Distributor_Comp = ({ distributor }) => {
         body: JSON.stringify(data),
       }
     );
+
+    if (!AddSoil.ok) {
+      const errorData = await AddSoil.json();
+      // Throw an error with the full response data
+      alert(errorData.message);
+      throw new Error(JSON.stringify(errorData));
+    }
+
     const result = await AddSoil.json();
-    console.log("result", result);
+
+    // console.log("result", result);
+
+    alert("Distributor Added Successfully");
 
     reset();
   };
@@ -132,7 +143,7 @@ const Distributor_Comp = ({ distributor }) => {
               </button>
             </div>
           ))}
-          <button type="button" onClick={() => append("")}>
+          <button type="button" className="addPBtn" onClick={() => append("")}>
             Add Product
           </button>
         </div>

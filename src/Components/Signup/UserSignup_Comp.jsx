@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import "./Admin.css";
-import { Link } from "react-router-dom";
+import { json, Link } from "react-router-dom";
 
 const UserSignup_Comp = () => {
   const {
@@ -30,6 +30,13 @@ const UserSignup_Comp = () => {
           body: JSON.stringify(data),
         }
       );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        // Throw an error with the full response data
+        alert(errorData.message);
+        throw new Error(JSON.stringify(errorData.message));
+      }
       const result = await response.json();
       // console.log("result", result);
       if (result.success === true) {
@@ -40,7 +47,7 @@ const UserSignup_Comp = () => {
       console.log(error);
     }
 
-    // reset();
+    reset();
   };
 
   return (

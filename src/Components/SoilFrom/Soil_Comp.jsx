@@ -54,7 +54,15 @@ const SoilForm = () => {
       body: JSON.stringify(data),
     });
     const result = await AddSoil.json();
-    console.log("result", result);
+    // console.log("result", result);
+    if (!AddSoil.ok) {
+      const errorData = await response.json();
+      // Throw an error with the full response data
+      alert(errorData.message);
+      throw new Error(JSON.stringify(errorData.message));
+    }
+
+    alert("Soil data added successfully");
 
     reset();
   };

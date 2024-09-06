@@ -84,6 +84,14 @@ const UpdateSoilForm = () => {
           }
         );
         const data = await response.json();
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          // Throw an error with the full response data
+          alert(errorData.message);
+          throw new Error(JSON.stringify(errorData.message));
+        }
+
         if (data.success) {
           setSoilData(data.soil || []);
         } else {

@@ -31,7 +31,15 @@ const FetchDistributor_Comp = () => {
           }
         );
         const data = await response.json();
-        console.log("data", data);
+        // console.log("data", data);
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          // Throw an error with the full response data
+          alert(errorData.message);
+          throw new Error(JSON.stringify(errorData.message));
+        }
+
         // Make sure to set the state to the soil array
         if (data.success) {
           setDistributorData(data.distributor || []);
@@ -79,7 +87,15 @@ const FetchDistributor_Comp = () => {
         }
       );
       const data = await response.json();
-      console.log("data", data);
+      // console.log("data", data);
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        // Throw an error with the full response data
+        alert(errorData.message);
+        throw new Error(JSON.stringify(errorData.message));
+      }
+
       setTrackDelete((pre) => pre + 1);
       alert("Distributor data deleted successfully");
     } catch (error) {
@@ -89,60 +105,6 @@ const FetchDistributor_Comp = () => {
 
   return (
     <>
-      {/* <div className="App">
-        <h1 className="soil-header">Soil Information</h1>
-        <div className="soil-card-container">
-          {soilData.length > 0 ? (
-            soilData.map((soil) => (
-              <div className="soil-card" key={soil._id}>
-                <h2>
-                  <strong>Soil Type: </strong>
-                  {soil.soilType}
-                </h2>
-                <p>
-                  <strong>Fertility Rating:</strong> {soil.fertilityRating}
-                </p>
-                <p>
-                  <strong>pH Level:</strong> {soil.pHLevel}
-                </p>
-                <p>
-                  <strong>Organic Matter:</strong>{" "}
-                  {soil.organicMatterPercentage}%
-                </p>
-                <p>
-                  <strong>Recommended Crops:</strong>{" "}
-                  {soil.recommendedCrops.join(", ")}
-                </p>
-                <p>
-                  <strong>Created At:</strong>{" "}
-                  {new Date(soil.createdAt).toLocaleString()}
-                </p>
-                <p>
-                  <strong>Updated At:</strong>{" "}
-                  {new Date(soil.updatedAt).toLocaleString()}
-                </p>
-
-                {isAdmin ? (
-                  <>
-                    <Link to={`/updatesoil/${soil._id}`}>
-                      <button className="update-btn">Update</button>
-                    </Link>
-                    ;
-                    <button
-                      className="delete-btn"
-                      onClick={() => handleDelete(soil._id)}
-                    >
-                      Delete
-                    </button>
-                  </>
-                ) : null}
-              </div>
-            ))
-          ) : (
-            <p className="no-data-message">No soil data available</p>
-          )}
-        </div>
-      </div> */}
       <div className="App">
         <h1 className="soil-header">Distributor Information</h1>
         <div className="soil-card-container">

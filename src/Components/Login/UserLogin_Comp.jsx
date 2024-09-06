@@ -31,6 +31,14 @@ const UserLogin_Comp = () => {
       );
       const result = await response.json();
       // console.log("result", result);
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        // Throw an error with the full response data
+        alert(errorData.message);
+        throw new Error(JSON.stringify(errorData.message));
+      }
+
       localStorage.setItem("token", result.authToken);
       localStorage.setItem("role", result.role);
       setTrackLogin((pre) => pre + 1);

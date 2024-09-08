@@ -20,7 +20,7 @@ Installation
 Clone the Repository
 
 
-git clone [https://github.com/yourusername/soil-farming-agent.git](https://github.com/sheikhamir1/soil-farming-agency/tree/main)
+git clone https://github.com/sheikhamir1/soil-farming-agency.git
 Navigate to the Project Directory
 
 

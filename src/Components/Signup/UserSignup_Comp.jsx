@@ -33,21 +33,23 @@ const UserSignup_Comp = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        // Throw an error with the full response data
-        alert(errorData.message);
-        throw new Error(JSON.stringify(errorData.message));
+        if (errorData.success === false) {
+          alert(errorData.message || "Form Validation error occurred");
+          throw new Error(JSON.stringify(errorData.message));
+        }
       }
+
       const result = await response.json();
-      // console.log("result", result);
+
       if (result.success === true) {
-        reset();
         alert("Registration successfull please Verify your email!");
+        reset();
+      } else {
+        alert(result.message || "Something went wrong");
       }
     } catch (error) {
       console.log(error);
     }
-
-    reset();
   };
 
   return (

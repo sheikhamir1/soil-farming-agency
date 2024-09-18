@@ -32,9 +32,10 @@ const AdminSignup_Comp = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        // Throw an error with the full response data
-        alert(errorData.message);
-        throw new Error(JSON.stringify(errorData));
+        if (errorData.success === false) {
+          alert(errorData.message || "Form Validation error occurred");
+          throw new Error(JSON.stringify(errorData.message));
+        }
       }
       const result = await response.json();
 
